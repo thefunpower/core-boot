@@ -11,18 +11,16 @@
         }
     ],
     "require": {
-        "php": ">=7.1",
         "thefunpower/core": "^2.0",
-        "thefunpower/vue": "^2.0",
         "thefunpower/db_medoo": "^2.0",  
         "thefunpower/auth": "^2.0",
         "thefunpower/misc": "^2.0",
-        "thefunpower/sony_flake_id":"^2.0",
-        "thefunpower/license_checker": "^2.0", 
+        "thefunpower/sony_flake_id":"^2.0", 
         "phpseclib/phpseclib": "^2.0",
         "phpoffice/phpspreadsheet": "^1.20",
         "ramsey/uuid": "^4.4", 
         "endroid/qr-code": "^4.7",
-        "erusev/parsedown": "^1.7"
+        "erusev/parsedown": "^1.7",
+        "thefunpower/vue": "^2.0" 
     }
 }
