@@ -50,6 +50,7 @@ $autoload->addPsr4('app\\',PATH.'app/');
 $autoload->addPsr4('service\\',PATH.'service/'); 
 $autoload->addPsr4('helper\\',PATH.'helper/'); 
 $autoload->addPsr4('plugins\\',PATH.'plugins/');
+$autoload->addPsr4('dump\\',PATH.'dump/');
 /**
  * 路由
  * https://github.com/bramus/router
@@ -66,7 +67,13 @@ $router = new \Bramus\Router\Router();
 include SYS_PATH . '/boot.php'; 
 //开始
 do_action('init');
+global $input;
 $input  = g();
+/**
+* 加载语言包
+*/
+$lang = $config['lang']?:'zh-cn';
+lib\Validate::lang($lang); 
 /**
 * 加载dump目录下的*.helper.php
 */
@@ -74,15 +81,10 @@ $dir = PATH . 'dump';
 if(is_dir($dir)){
   $all = glob($dir.'/*.helper.php'); 
   foreach($all as $v){
-    include $v.'.php';
+    include $v;
   }
 }
-/**
-* 加载语言包
-*/
-$lang = $config['lang']?:'zh-cn';
-lib\Validate::lang($lang);
-do_action('begin');
+
 /**
 * 加载app下控制器
 */
