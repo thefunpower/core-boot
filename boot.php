@@ -6,6 +6,7 @@
     Connect Email: sunkangchina@163.com 
     Code Vesion: v1.0.x
 */
+
 date_default_timezone_set('PRC');
 //版本号
 if(!defined('DEBUG')) define('VERSION', "1.0.1");
@@ -41,7 +42,7 @@ include PATH.'config.ini.php';
 */
 $medoo_db_config = $config;
 if(!file_exists('db_active_main')){
-  include PATH.'vendor/thefunpower/db_medoo/inc/db/boot.php';
+  include THE_FUN_PATH.'db_medoo/inc/db/boot.php';
 } 
 /**
 * 加载autoload
@@ -51,6 +52,7 @@ $autoload = include PATH . 'vendor/autoload.php';
 $autoload->addPsr4('app\\',PATH.'app/');
 $autoload->addPsr4('service\\',PATH.'service/'); 
 $autoload->addPsr4('helper\\',PATH.'helper/'); 
+$autoload->addPsr4('plugins\\',PATH.'plugins/');
 /**
  * 路由
  * https://github.com/bramus/router
@@ -71,8 +73,10 @@ $input  = g();
 * 加载dump目录下的*.helper.php
 */
 $dir = PATH . 'dump'; 
+echo $dir;
 if(is_dir($dir)){
   $all = glob($dir.'/*.helper.php');
+  pr($all);exit;
   foreach($all as $v){
     include $v.'.php';
   }

@@ -24,10 +24,5 @@
         "ramsey/uuid": "^4.4", 
         "endroid/qr-code": "^4.7",
         "erusev/parsedown": "^1.7"
-    }, 
-    "autoload": { 
-        "files": [ 
-            "./boot.php"
-        ]
     }
 }
