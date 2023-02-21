@@ -1,0 +1,32 @@
+{
+    "name": "thefunpower/core-boot",
+    "type": "library",
+    "description": "启动项目",
+    "keywords": ["php"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ken.sun",
+            "email": "sunkangchina@163.com" 
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "thefunpower/core": "dev-main",
+        "thefunpower/vue": "dev-main",
+        "thefunpower/db_medoo": "dev-main",  
+        "thefunpower/auth": "dev-main",
+        "thefunpower/misc": "dev-main",
+        "thefunpower/sony_flake_id":"dev-main",
+        "thefunpower/license_checker": "dev-main", 
+        "phpseclib/phpseclib": "^2.0",
+        "phpoffice/phpspreadsheet": "^1.20",
+        "ramsey/uuid": "^4.4", 
+        "endroid/qr-code": "^4.7"
+    }, 
+    "autoload": { 
+        "files": [ 
+            "./boot.php"
+        ]
+    }
+}
