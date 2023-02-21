@@ -15,7 +15,8 @@ if(!defined('ADMIN_DIR_NAME'))define("ADMIN_DIR_NAME", 'admin-dev');
 if(!defined('ADMIN_COOKIE_NAME'))define("ADMIN_COOKIE_NAME", 'user_id'); 
 //定义一些路径常量一般不用修改
 if(!defined('PATH')) define('PATH', realpath(__DIR__ . '/../../../').'/');
-define('SYS_PATH', PATH . 'vendor/thefunpower/core/');  
+if(!defined('THE_FUN_PATH')) define('THE_FUN_PATH', PATH . 'vendor/thefunpower/');  
+if(!defined('SYS_PATH')) define('SYS_PATH', THE_FUN_PATH . 'core/');   
 /**
  * 错误提示 
  */
