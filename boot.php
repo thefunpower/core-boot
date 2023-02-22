@@ -89,5 +89,5 @@ if(is_dir($dir)){
 * 加载app下控制器
 */
 $router->set404(function() { 
-    auto_load_app_router('app');
+    auto_load_app_router(['app','']);
 });
