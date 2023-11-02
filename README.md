@@ -8,5 +8,5 @@ composer require thefunpower/core-boot
 
 ### 开源协议
  
-[LICENSE](LICENSE.md)
+[LICENSE](LICENSE)
 
