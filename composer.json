@@ -3,7 +3,7 @@
     "type": "library",
     "description": "启动项目",
     "keywords": ["php"],
-    "license": "MIT",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "ken"
